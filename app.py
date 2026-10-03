@@ -6,17 +6,17 @@ import matplotlib.pyplot as plt
 # Page Config with Zephyr Theme styling
 st.set_page_config(page_title="BioNexus AI: Bioinformatics Hub", layout="wide")
 
-# Custom CSS for Zephyr (Airy Blue & Soft Cyan) Palette
+# Custom CSS for Full Uniform Zephyr Background & Containers
 st.markdown("""
     <style>
-    /* Main background color - Soft breezy zephyr blue */
-    .stApp {
-        background-color: #eef8fb;
+    /* Main app and content containers background */
+    .stApp, section[data-testid="stMain"], .block-container {
+        background-color: #eef8fb !important;
         color: #1d3557;
     }
-    /* Sidebar styling - Slightly deeper zephyr tone */
+    /* Sidebar styling */
     [data-testid="stSidebar"] {
-        background-color: #d7ecf3;
+        background-color: #d7ecf3 !important;
     }
     /* Metric Card styling */
     div[data-testid="stMetric"] {
@@ -35,10 +35,6 @@ st.markdown("""
     /* Headers */
     h1, h2, h3 {
         color: #03045e !important;
-    }
-    /* Dataframe styling */
-    dataframe {
-        border-radius: 10px;
     }
     </style>
 """, unsafe_allow_html=True)
