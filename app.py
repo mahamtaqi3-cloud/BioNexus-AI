@@ -6,13 +6,13 @@ import matplotlib.pyplot as plt
 # Page Config with Zephyr Theme styling
 st.set_page_config(page_title="BioNexus AI: Bioinformatics Hub", layout="wide")
 
-# Custom CSS for Full Uniform Zephyr Background & Containers
+# Comprehensive CSS to force the Zephyr background across all Streamlit containers
 st.markdown("""
     <style>
-    /* Main app and content containers background */
-    .stApp, section[data-testid="stMain"], .block-container {
+    /* Global background override */
+    .stApp, [data-testid="stMain"], .main, .block-container, [data-testid="stVerticalBlock"] {
         background-color: #eef8fb !important;
-        color: #1d3557;
+        color: #1d3557 !important;
     }
     /* Sidebar styling */
     [data-testid="stSidebar"] {
